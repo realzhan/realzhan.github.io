@@ -71,7 +71,7 @@ body{
 	width:140px;
 	height:70px;
 	background-size:280px 50px;
-	background-position-x:0px;
+	background-position:0px 0px;
 	animation:lineshow 300ms;
 	-moz-animation:lineshow 300ms;
 	-webkit-animation:lineshow 300ms;
@@ -160,8 +160,8 @@ body{
 }
 @keyframes lineshow
 {
-	from {background-position-x:0px;}
-	to {background-position-x:-140px;}
+	from {background-position:0px 0px;}
+	to {background-position:-140px 0px;}
 }
 @keyframes ropic{
 	from{transform: rotate(0deg);}
