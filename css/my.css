@@ -43,9 +43,13 @@ body{
 	display: block;
 	opacity: 0;
 }
-#yinpic{
+.yinpic{
 	display: block;
+	position: absolute;
 	width:100%;
+}
+#name{
+	opacity:0;
 }
 #choice ul{
 	display: block;
@@ -59,49 +63,38 @@ body{
 	width:100%;
 	height: 20%;
 }
+
+/*line*/
 .line{
 	display: none;
 	width:140px;
-	height:70px;	
+	height:70px;
+	background-size:280px 50px;
+	background-position-x:0px;
+	animation:lineshow 300ms;
+	-moz-animation:lineshow 300ms;
+	-webkit-animation:lineshow 300ms;
+	animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
 }
-
-
 
 /*for 4 line*/
 .line0{
-	background:url(../img/linexunmeng.png) no-repeat;
-	background-size:280px 50px;
-	background-position-x:0px;
-	animation:lineshow 300ms;
-	animation-fill-mode: forwards;
+	background:url(../img/linexunmeng.png) no-repeat;	
 }
 .line1{
-	background:url(../img/line_huaigu.png) no-repeat;
-	background-size:280px 50px;
-	background-position-x:0px;
-	animation:lineshow 300ms;
-	animation-fill-mode: forwards;
+	background:url(../img/line_jiangshang.png) no-repeat;
+	
 }
 .line2{
-	background:url(../img/line_jiangshang.png) no-repeat;
-	background-size:280px 50px;
-	background-position-x:0px;
-	animation:lineshow 300ms;
-	animation-fill-mode: forwards;
+	background:url(../img/line_mingyue.png) no-repeat;	
 }
 .line3{
-	background:url(../img/line_mingyue.png) no-repeat;
-	background-size:280px 50px;
-	background-position-x:0px;
-	animation:lineshow 300ms;
-	animation-fill-mode: forwards;
+	background:url(../img/linemengduan.png) no-repeat;	
 }
 .line4{
-	background:url(../img/linemengduan.png) no-repeat;
-	background-size:280px 50px;
-	background-position-x:0px;
-	animation:lineshow 300ms;
-	animation-fill-mode: forwards;
+	background:url(../img/line_huaigu.png) no-repeat;
 }
 /*for 4 line over*/
 
@@ -112,6 +105,8 @@ body{
 	float: right;
 	width:50px;
 	transition: transform 300ms;
+	-moz-transition: transform 300ms;
+	-webkit-transition: transform 300ms;
 }
 .smallcirlce:hover{
 	transform: rotate(90deg);
@@ -124,6 +119,22 @@ body{
 #main img{
 	height: 100%;
 }
+.cbt{
+	animation:cbtshow 300ms;
+	-moz-animation:cbtshow 300ms;
+	-webkit-animation:cbtshow 300ms;
+	animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+#cbt {
+	display: none;
+	position: absolute;
+	bottom:0px;
+	left:20px;
+	width:15%;
+	height:15% !important;
+}
 .ropic{
 	position: absolute;
 	top:0px;
@@ -133,8 +144,17 @@ body{
 .ropicing{
 	display: none;
 	animation:ropic 30s;
-	animation-timing-function:linear; 
+	-moz-animation:ropic 30s;
+	-webkit-animation:ropic 30s;
+	animation-play-state: running;
+	-moz-animation-play-state: running;
+	-moz-animation-play-state: running;
+	animation-timing-function: linear;
+	-moz-animation-timing-function:linear;
+	-webkit-animation-timing-function: linear;	
 	animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
 	opacity: 0;
 }
 @keyframes lineshow
@@ -145,6 +165,10 @@ body{
 @keyframes ropic{
 	from{transform: rotate(0deg);}
 	to{transform: rotate(360deg);}
+}
+@keyframes cbtshow{
+	from{opacity: 0;}
+	to{opacity: 1;}
 }
 
 
