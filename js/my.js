@@ -1,4 +1,4 @@
-$(document).ready(function(){
+﻿$(document).ready(function(){
 	$("#btn0").attr("src","img/smallsircle1clicked.png");
 	$("#poem0").css("opacity","1");
 	$(".smallcirlce").hover(function(){
@@ -12,6 +12,8 @@ $(document).ready(function(){
 	},function(){
 		$("#name").animate({opacity:'0'},"quick");
 	})
+
+
 	var audio1=$("#audio1");
 	var audio2=$("#audio2");
 	var audio3=$("#audio3");
