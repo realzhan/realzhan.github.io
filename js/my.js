@@ -8,9 +8,9 @@ $(document).ready(function(){
 		$(this).prev(".line").css("display","none");
 	})
 	$("#yin").hover(function(){
-		$("#name").animate({opacity:'1'},"slow");
+		$("#name").animate({opacity:'1'},"quick");
 	},function(){
-		$("#name").animate({opacity:'0'},"slow");
+		$("#name").animate({opacity:'0'},"quick");
 	})
 	var audio1=$("#audio1");
 	var audio2=$("#audio2");
@@ -22,78 +22,89 @@ $(document).ready(function(){
 	var btn3=$("#btn3");
 	var btn4=$("#btn4");
 	var cbt=$("#cbt");
+	var poem0=$("#poem0");
+	var poem1=$("#poem1");
+	var poem2=$("#poem2");
+	var poem3=$("#poem3");
+	var poem4=$("#poem4");
+	var ropic0=$("#ropic0");
+	var ropic1=$("#ropic1");
+	var ropic2=$("#ropic2");
+	var ropic3=$("#ropic3");
+	var ropic4=$("#ropic4");
+	var smallcircle=$(".smallcirlce");
 	var playmode=true;
 	var playnum=0;
 	//点击切换之后的初始化
-	$(".smallcirlce").click(function(){
-		$("#poem0").css("opacity","0");
-		$("#ropic0").css("opacity","0");
-		$("#btn0").attr("src","img/smallsircle1.png");
-		$("#btn1").attr("src","img/smallsircleqi.png");
-		$("#btn2").attr("src","img/smallsirclecheng.png");
-		$("#btn3").attr("src","img/smallsirclezhuan.png");
-		$("#btn4").attr("src","img/smallsirclehe.png");
+	smallcircle.click(function(){
+		poem0.css("opacity","0");
+		ropic0.css("opacity","0");
+		btn0.attr("src","img/smallsircle1.png");
+		btn1.attr("src","img/smallsircleqi.png");
+		btn2.attr("src","img/smallsirclecheng.png");
+		btn3.attr("src","img/smallsirclezhuan.png");
+		btn4.attr("src","img/smallsirclehe.png");
 		for(var i=1;i<5;i++)
 		{$("#"+"audio"+i).get(0).pause();
 		$("#"+"ropic"+i).css({"dispaly":"none","opacity":"0"});
 		$("#"+"poem"+i).css("opacity","0");
 		}
 	})
-	$(btn0).click(function(){
-		$("#ropic0").animate({opacity:'1'},"slow");
-		$(btn0).attr("src","img/smallsircle1clicked.png");
-		$("#poem0").animate({opacity:'1'},"slow");
-		$(cbt).css("display","none");
+	btn0.click(function(){
+		ropic0.animate({opacity:'1'},"slow");
+		btn0.attr("src","img/smallsircle1clicked.png");
+		poem0.animate({opacity:'1'},"slow");
+		cbt.css("display","none");
 		playnum=0;
 	})
-	$(btn2).click(function(){
-		$(cbt).css("display","block");
-		$(cbt).attr("src","img/ctpause.png");
-		$("#ropic2").css("display","block");
-		$("#ropic2").animate({opacity:'1'},"slow");
-		$("#poem2").animate({opacity:'1'},"slow");
-		$(btn2).attr("src","img/smallsirclechengclicked.png");
-		$(audio2).get(0).currentTime=0;
-		$(audio2).get(0).play();
+	btn2.click(function(){
+		cbt.css("display","block");
+		cbt.attr("src","img/ctpause.png");
+		ropic2.css("display","block");
+		ropic2.animate({opacity:'1'},"slow");
+		poem2.animate({opacity:'1'},"slow");
+		btn2.attr("src","img/smallsirclechengclicked.png");
+		audio2.get(0).currentTime=0;
+		audio2.get(0).play();
 		playnum=2;
 	})
-	$(btn1).click(function(){
-		$(cbt).css("display","block");
-		$(cbt).attr("src","img/ctpause.png");
-		$("#ropic1").css("display","block");
-		$("#ropic1").animate({opacity:'1'},"slow");
-		$("#poem1").animate({opacity:'1'},"slow");
-		$(btn1).attr("src","img/smallsircleqiclicked.png");
+	btn1.click(function(){
+		cbt.css("display","block");
+		cbt.attr("src","img/ctpause.png");
+		ropic1.css("display","block");
+		ropic1.animate({opacity:'1'},"slow");
+		poem1.animate({opacity:'1'},"slow");
+		btn1.attr("src","img/smallsircleqiclicked.png");
 		audio1.get(0).currentTime=0;
 		audio1.get(0).play();
 		playnum=1;
 	})
-	$(btn3).click(function(){
-		$(cbt).css("display","block");
-		$(cbt).attr("src","img/ctpause.png");
-		$("#ropic3").css("display","block");
-		$("#ropic3").animate({opacity:'1'},"slow");
-		$("#poem3").animate({opacity:'1'},"slow");
-		$(btn3).attr("src","img/smallsirclezhuanclicked.png");
-		$(audio3).get(0).currentTime=0;
-		$(audio3).get(0).play();
+	btn3.click(function(){
+		cbt.css("display","block");
+		cbt.attr("src","img/ctpause.png");
+		ropic3.css("display","block");
+		ropic3.animate({opacity:'1'},"slow");
+		poem3.animate({opacity:'1'},"slow");
+		btn3.attr("src","img/smallsirclezhuanclicked.png");
+		audio3.get(0).currentTime=0;
+		audio3.get(0).play();
 		playnum=3;
 	})
 	$(btn4).click(function(){
-		$(cbt).css("display","block");
-		$(cbt).attr("src","img/ctpause.png");
-		$("#ropic4").css("display","block");
-		$("#ropic4").animate({opacity:'1'},"slow");
-		$("#poem4").animate({opacity:'1'},"slow");
-		$(btn4).attr("src","img/smallsircleheclicked.png");
-		$(audio4).get(0).currentTime=0;
-		$(audio4).get(0).play();
+		cbt.css("display","block");
+		cb.attr("src","img/ctpause.png");
+		ropic4.css("display","block");
+		ropic4.animate({opacity:'1'},"slow");
+		poem4.animate({opacity:'1'},"slow");
+		btn4.attr("src","img/smallsircleheclicked.png");
+		audio4.get(0).currentTime=0;
+		audio4.get(0).play();
 		playnum=4;
 	})
 	//点击事件处理完成
 	//播放控制
 
-	$(cbt).click(function(){
+	cbt.click(function(){
 			if(playmode)
 				{$(this).attr("src","img/ctplay.png");
 				playmode=false;}
@@ -119,10 +130,5 @@ $(document).ready(function(){
 				 }				 
 				}
 				
-	})	
-	$("#yin").hover(function(){
-		$("#yin2").attr("src","img/yin2.png");
-	},function(){
-		$("#yin2").attr("src","img/yin.png");
-	})
+			})	
 })
