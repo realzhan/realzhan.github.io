@@ -13,7 +13,6 @@
 		$("#name").animate({opacity:'0'},"quick");
 	})
 
-
 	var audio1=$("#audio1");
 	var audio2=$("#audio2");
 	var audio3=$("#audio3");
@@ -94,7 +93,7 @@
 	})
 	$(btn4).click(function(){
 		cbt.css("display","block");
-		cb.attr("src","img/ctpause.png");
+		cbt.attr("src","img/ctpause.png");
 		ropic4.css("display","block");
 		ropic4.animate({opacity:'1'},"slow");
 		poem4.animate({opacity:'1'},"slow");
